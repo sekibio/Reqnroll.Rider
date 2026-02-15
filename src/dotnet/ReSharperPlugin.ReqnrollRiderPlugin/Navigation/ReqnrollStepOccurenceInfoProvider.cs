@@ -10,7 +10,7 @@ using JetBrains.Util;
 
 namespace ReSharperPlugin.ReqnrollRiderPlugin.Navigation;
 
-[SolutionFeaturePart(Instantiation.DemandAnyThreadUnsafe)]
+[SolutionFeaturePart(Instantiation.DemandAnyThreadSafe)]
 public class ReqnrollStepOccurenceInfoProvider : IOccurrenceInformationProvider2
 {
     public IDeclaredElementEnvoy GetTypeMember(IOccurrence occurrence)

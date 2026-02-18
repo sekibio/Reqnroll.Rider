@@ -41,6 +41,11 @@ jobs:
         set_check_status_from_test_outcome: true
         project_path: src/dotnet/ReSharperPlugin.ReqnrollRiderPlugin.Tests/ReSharperPlugin.ReqnrollRiderPlugin.Tests.csproj
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload plugin ZIP
+      uses: actions/upload-artifact@v4.0.0
+      with:
+        name: ReqnrollPlugin-ZIP
+        path: build/distributions/*.zip
     - name: Unpack Distribution
       shell: pwsh
       run: scripts/Unpack-Distribution.ps1

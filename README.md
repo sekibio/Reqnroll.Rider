@@ -5,6 +5,8 @@ The "Reqnroll Support" plugin adds specific functionality for the [Reqnroll](htt
 
 **IMPORTANT**: This plugin is still at it's beginning, It may be still buggy. Don't hesitate to report any bug or cool feature to add and don't forget to :+1: any feature you want to help prioritize.
 
+**IMPORTANT**: This fork adds the functionality of copying the scaffolding of steps without implementation to the clipboard.
+
 ## Build plugin
 
 ```shell

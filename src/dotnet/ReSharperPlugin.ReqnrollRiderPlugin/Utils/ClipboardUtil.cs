@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using JetBrains.Application.Notifications;
 using JetBrains.Application.Parts;
 using JetBrains.Lifetimes;
@@ -25,7 +26,7 @@ public class ClipboardUtil : IClipboardUtil
 
     public void CopyToClipboard(string text)
     {
-        JetBrains.Util.ClipboardUtil.SetText(text);
+        System.Windows.Forms.Clipboard.SetText(text);
     }
 
     public void ShowCopiedNotification()

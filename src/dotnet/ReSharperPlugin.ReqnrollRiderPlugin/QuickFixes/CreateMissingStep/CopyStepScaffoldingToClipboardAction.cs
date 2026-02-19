@@ -2,7 +2,9 @@ using System.Linq;
 using JetBrains.Application.Settings;
 using JetBrains.ProjectModel;
 using JetBrains.ReSharper.Feature.Services.Bulbs;
+using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.TextControl;
+using ReSharperPlugin.ReqnrollRiderPlugin.Extensions;
 using ReSharperPlugin.ReqnrollRiderPlugin.Psi;
 using ReSharperPlugin.ReqnrollRiderPlugin.References;
 using ReSharperPlugin.ReqnrollRiderPlugin.Settings;
@@ -35,8 +37,8 @@ public class CopyStepScaffoldingToClipboardAction : IBulbAction
     public void Execute(ISolution solution, ITextControl textControl)
     {
         // Read async preference from settings
-        var contextRange = _reference.GetTreeNode().GetSettingsStoreWithEditorConfig(_settingsStore);
-        var settings = contextRange.GetKey<ReqnrollPluginSettings>(SettingsOptimization.OptimizeDefault);
+        var contextBoundSettingsStore = _settingsStore.BindToContextTransient(ContextRange.Smart(_reference.GetTreeNode().ToDataContext()));
+        var settings = contextBoundSettingsStore.GetKey<ReqnrollPluginSettings>(SettingsOptimization.OptimizeDefault);
         var isAsync = settings.GenerateAsyncSteps;
 
         // Get step information

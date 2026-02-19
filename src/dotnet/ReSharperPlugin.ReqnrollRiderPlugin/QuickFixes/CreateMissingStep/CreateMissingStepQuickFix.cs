@@ -54,7 +54,7 @@ public class CreateMissingStepQuickFix : IQuickFix
                 psiServices.GetComponent<IStepScaffoldingGenerator>(),
                 psiServices.GetComponent<IClipboardUtil>(),
                 psiServices.GetComponent<ISettingsStore>()
-            ), CommonThemedIcons.Copy.Id, IntentionsAnchors.QuickFixesAnchor)
+            ), BulbThemedIcons.ContextAction.Id, IntentionsAnchors.QuickFixesAnchor)
         };
 
         return actions;

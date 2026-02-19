@@ -11,18 +11,20 @@ import kotlin.io.path.isDirectory
 plugins {
     alias(libs.plugins.changelog)
     alias(libs.plugins.gradleIntelliJPlatform)
-    alias(libs.plugins.gradleJvmWrapper)
+    // DISABLED: Using system Java instead due to Windows Security blocking downloads
+    // alias(libs.plugins.gradleJvmWrapper)
     alias(libs.plugins.kotlinJvm)
     id("java")
 }
 
-jvmWrapper {
-    linuxAarch64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_linux-aarch64_bin.tar.gz"
-    linuxX64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_linux-x64_bin.tar.gz"
-    macAarch64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_macos-aarch64_bin.tar.gz"
-    macX64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_macos-x64_bin.tar.gz"
-    windowsX64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_windows-x64_bin.zip"
-}
+// DISABLED: Using system Java instead due to Windows Security blocking downloads
+// jvmWrapper {
+//     linuxAarch64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_linux-aarch64_bin.tar.gz"
+//     linuxX64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_linux-x64_bin.tar.gz"
+//     macAarch64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_macos-aarch64_bin.tar.gz"
+//     macX64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_macos-x64_bin.tar.gz"
+//     windowsX64JvmUrl = "https://download.oracle.com/java/21/archive/jdk-21.0.3_windows-x64_bin.zip"
+// }
 
 allprojects {
     repositories {

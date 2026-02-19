@@ -1,0 +1,11 @@
+Downloading https://download.oracle.com/java/21/archive/jdk-21.0.3_windows-x64_bin.zip to C:\Users\kiesewetter_s1\AppData\Local\gradle-jvm\gradle-jvm.zip
+Extracting C:\Users\kiesewetter_s1\AppData\Local\gradle-jvm\gradle-jvm.zip to C:\Users\kiesewetter_s1\AppData\Local\gradle-jvm\jdk-21.0.3_windows-x64_bin-125c41\
+Ausnahme beim Aufrufen von "ExtractToDirectory" mit 2 Argument(en):  "Der Vorgang konnte nicht erfolgreich 
+abgeschlossen werden, da die Datei einen Virus oder mîglicherweise unerwÅnschte Software enthÑlt.
+"
+In Zeile:1 Zeichen:111
++ ... ileSystem'; [IO.Compression.ZipFile]::ExtractToDirectory('..\\gradle- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : IOException
+ 
